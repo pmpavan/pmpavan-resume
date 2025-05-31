@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan P M - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0.5in auto;
+            background: white;
+        }
+        
+        .header {
+            border-bottom: 2px solid #2c3e50;
+            padding: 15px 0 10px 0;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .header .title {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10px;
+            color: #555;
+        }
+        
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 20px;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 2px;
+        }
+        
+        .job {
+            margin-bottom: 12px;
+        }
+        
+        .job-header {
+            margin-bottom: 4px;
+        }
+        
+        .company {
+            font-size: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+            display: inline;
+        }
+        
+        .position {
+            font-size: 11px;
+            color: #555;
+            display: inline;
+        }
+        
+        .duration {
+            font-size: 10px;
+            color: #7f8c8d;
+            font-style: italic;
+            float: right;
+        }
+        
+        .job ul {
+            list-style: none;
+            margin-top: 4px;
+        }
+        
+        .job li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3px;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        
+        .job li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+        .summary {
+            font-size: 11px;
+            text-align: justify;
+            line-height: 1.4;
+        }
+        
+        .education {
+            font-size: 11px;
+        }
+        
+        .education h3 {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .sidebar .section {
+            margin-bottom: 12px;
+        }
+        
+        .sidebar .section-title {
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        
+        .skills-list {
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        
+        .skill-category {
+            margin-bottom: 6px;
+        }
+        
+        .skill-category strong {
+            color: #2c3e50;
+            font-size: 10px;
+        }
+        
+        .strengths-list {
+            list-style: none;
+            font-size: 10px;
+        }
+        
+        .strengths-list li {
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .strengths-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .achievements-list {
+            list-style: none;
+            font-size: 10px;
+        }
+        
+        .achievements-list li {
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .achievements-list li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-size: 8px;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+            
+            .duration {
+                float: none;
+                display: block;
+            }
+        }
+        
+        @media print {
+            .print-btn {
+                display: none;
+            }
+            
+            .container {
+                margin: 0;
+            }
+            
+            body {
+                font-size: 10px;
+            }
+            
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">Print PDF</button>
+    
+    <div class="container">
+        <header class="header">
+            <h1>Pavan P M</h1>
+            <div class="title">Engineering Manager – Mobile</div>
+            <div class="contact-info">
+                <span>📍 Bengaluru, India</span>
+                <span>📞 +91-9790708464</span>
+                <span>📧 pmpavan@outlook.com</span>
+                <span><a href="https://linkedin.com/in/pavanpm">LinkedIn</a></span>
+                <span><a href="https://github.com/pmpavan">GitHub</a></span>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="left-column">
+                <section class="section">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p class="summary">
+                        Engineering Manager with <strong>10+ years</strong> in <strong>mobile development</strong>, specializing in <strong>Android applications</strong> with large-scale user bases. Proven track record of <strong>leading cross-functional teams</strong>, delivering <strong>high-impact features</strong>, and driving <strong>architectural improvements</strong>. Expert in establishing <strong>engineering best practices</strong>, <strong>mentoring teams</strong>, and aligning <strong>technical execution</strong> with business objectives.
+                    </p>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="company">slice Small Finance Bank</div>
+                            <div class="duration">Sept 2024 – Present</div>
+                            <br>
+                            <div class="position">Engineering Manager – Mobile | Bengaluru, India</div>
+                        </div>
+                        <ul>
+                            <li><strong>People Management</strong>: Managed 5 direct reports, handled performance reviews, career development, and team engagement</li>
+                            <li><strong>Team Leadership</strong>: Led cross-functional banking pod during NESFB merger, delivered features while maintaining quality</li>
+                            <li><strong>Technical Execution</strong>: Delivered financial services (Interest/TDS Certificates, Add Money, Odometer) using modern Android architecture</li>
+                            <li><strong>Security & Compliance</strong>: Implemented App Protectt SDK, closed KPMG audit through Compliance & Infosec collaboration</li>
+                            <li><strong>Process Improvement</strong>: Boosted test coverage via Snapshot Testing, established lean QA & documentation practices</li>
+                            <li><strong>Cross-Team Collaboration</strong>: Reduced iOS app size by 12MB through backend/platform alignment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="company">Meesho</div>
+                            <div class="duration">Sept 2018 – Sept 2024</div>
+                            <br>
+                            <div class="position">Lead Android Developer | Bengaluru, India</div>
+                        </div>
+                        <ul>
+                            <li><strong>Performance Optimization</strong>: Led Android Discovery pod for <strong>140M+ MAU app</strong>, achieved <strong>28% ANR improvement</strong>, <strong>27% faster</strong> cold start, <strong>36% UI jank reduction</strong></li>
+                            <li><strong>Architecture Enhancement</strong>: Spearheaded redesign using <strong>MVVM</strong> and <strong>Jetpack components</strong>, improved code maintainability and developer onboarding</li>
+                            <li><strong>Analytics & Experimentation</strong>: Architected <strong>in-house event tracking system</strong> enabling rapid product experimentation and data-driven decisions</li>
+                            <li><strong>Design Systems</strong>: Implemented comprehensive <strong>Mesh design system</strong> across Android modules, ensured consistent UX during rebranding</li>
+                            <li><strong>Feature Development</strong>: Enabled <strong>real-time streaming</strong> through SDK evaluation and live broadcast integration</li>
+                            <li><strong>Team Development</strong>: Mentored junior developers, conducted <strong>code reviews</strong>, aligned <strong>OKR planning</strong> with engineering/product objectives</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="company">Freshworks</div>
+                            <div class="duration">Aug 2015 – Aug 2018</div>
+                            <br>
+                            <div class="position">Senior Software Engineer | Chennai, India</div>
+                        </div>
+                        <ul>
+                            <li><strong>Product Development</strong>: Led mobile development of <strong>Freshsales CRM</strong> using <strong>Kotlin</strong> and <strong>MVP architecture</strong></li>
+                            <li><strong>Technical Migration</strong>: Drove architectural transition from <strong>MVC to MVVM</strong>, improved test coverage and modularity</li>
+                            <li><strong>UI/UX Implementation</strong>: Developed dynamic forms and rendering logic based on <strong>REST API contracts</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="company">Frilp (Acquired by Freshworks)</div>
+                            <div class="duration">Jan 2014 – Jul 2015</div>
+                            <br>
+                            <div class="position">Software Engineer | Chennai, India</div>
+                        </div>
+                        <ul>
+                            <li><strong>Startup Product</strong>: Built social recommendation platform from ground up, contributed to successful <strong>Freshworks acquisition</strong></li>
+                            <li><strong>Feature Implementation</strong>: Developed <strong>chat</strong>, <strong>user onboarding</strong>, and <strong>notification modules</strong> using Android SDK and REST APIs</li>
+                            <li><strong>Agile Practices</strong>: Collaborated with backend and design teams using <strong>Agile methodologies</strong></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="sidebar">
+                <section class="section">
+                    <h2 class="section-title">Core Strengths</h2>
+                    <ul class="strengths-list">
+                        <li><strong>Cross-Functional Leadership</strong> - Fostering collaboration to enhance delivery and team dynamics</li>
+                        <li><strong>Mentorship & Development</strong> - Guiding junior developers and fostering team growth</li>
+                        <li><strong>Execution Excellence</strong> - Delivering scalable, high-performance mobile solutions</li>
+                        <li><strong>People Leadership</strong> - Building high-performing teams through structured feedback</li>
+                        <li><strong>Process Optimization</strong> - Establishing lean practices improving velocity and quality</li>
+                    </ul>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Key Achievements</h2>
+                    <ul class="achievements-list">
+                        <li><strong>Performance Excellence</strong> - Led Android optimizations for 140M+ MAU app with significant UX improvements</li>
+                        <li><strong>Regulatory Compliance</strong> - Implemented measures ensuring successful KPMG audit closure</li>
+                    </ul>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-list">
+                        <div class="skill-category">
+                            <strong>Languages & Frameworks:</strong> Kotlin, Java, Android SDK, Jetpack, MVVM, MVP, Clean Architecture
+                        </div>
+                        <div class="skill-category">
+                            <strong>Tools & Platforms:</strong> GitHub Actions, CircleCI, JUnit, Mockito, Snapshot Testing, Retrofit, REST APIs, Firebase, Gradle, Android Studio, Crashlytics, Embrace
+                        </div>
+                        <div class="skill-category">
+                            <strong>Practices:</strong> OWASP Compliance, Agile Methodologies, CI/CD Pipelines, Modular Architecture, Performance Optimization
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education">
+                        <h3>Coimbatore Institute of Technology</h3>
+                        <p><strong>M.Sc. Software Engineering</strong> | 2009 – 2014 | Coimbatore, India</p>
+                    </div>
+                </section>
+                
+                <section class="section">
+                    <h2 class="section-title">Languages</h2>
+                    <div class="skills-list">
+                        English, Hindi, Malayalam, Tamil, Kannada
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
