@@ -1,0 +1,258 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan P M Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .mainbar {
+      padding: 40px 50px;
+    }
+
+    .sidebar {
+      background-color: #23405d;
+      color: #fff;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: block;
+      border: 2px solid #fff;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .mainbar p,
+    .sidebar p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 4px;
+      letter-spacing: 0.8px;
+    }
+
+    .sidebar .section-title {
+      color: #fff;
+      border-bottom: 1px solid #999;
+    }
+
+    .job-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 24px;
+    }
+
+    .job-details {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: #555;
+      font-style: italic;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .mainbar, .sidebar {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+<script>
+  function printResume() {
+    window.print();
+  }
+</script>
+<style>
+  @media print {
+    body {
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      box-shadow: none;
+    }
+    .sidebar {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+  <div style="text-align: right; padding: 10px 40px;">
+    <button onclick="printResume()" style="background-color: #0073e6; color: #fff; border: none; padding: 8px 16px; font-size: 14px; border-radius: 4px; cursor: pointer;">Export as PDF</button>
+  </div>
+  <div class="container">
+    <div class="mainbar">
+      <h1>Pavan P M</h1>
+      <p><strong>Engineering Manager – Mobile</strong></p>
+      <p>📍 Bengaluru, India | 📞 +91-9790708464 | 📧 pmpavan@outlook.com</p>
+      <p><a href="https://linkedin.com/in/pavanpm">LinkedIn</a> | <a href="https://github.com/pmpavan">GitHub</a></p>
+
+      <div class="section-title">Professional Summary</div>
+      <p>Engineering Manager with <strong>10+ years</strong> of experience in <strong>mobile development</strong>, specializing in <strong>Android applications</strong> with large-scale user bases. Proven track record of <strong>leading cross-functional teams</strong>, delivering <strong>high-impact features</strong>, and driving <strong>architectural improvements</strong> that enhance performance, stability, and developer productivity. Expertise in establishing <strong>engineering best practices</strong>, <strong>mentoring team members</strong>, and collaborating with stakeholders to align <strong>technical execution</strong> with business objectives.</p>
+
+      <div class="section-title">Professional Experience</div>
+
+      <div class="job-title">slice Small Finance Bank | Bengaluru, India</div>
+      <div class="job-details">Engineering Manager – Mobile · Sept 2024 – Present</div>
+      <ul>
+        <li><strong>People Management</strong>: Managed 5 direct reportees and was responsible for their performance reviews, career development, goal setting, and team engagement initiatives</li>
+        <li><strong>Team Leadership</strong>: Led cross-functional banking pod during NESFB merger, ensuring timely delivery of features while maintaining quality standards</li>
+        <li><strong>Technical Execution</strong>: Delivered key financial services including Interest/TDS Certificates, Add Money, and Odometer using modern Android architecture</li>
+        <li><strong>Security & Compliance</strong>: Implemented App Protectt SDK and closed audit via collaboration with Compliance & Infosec</li>
+        <li><strong>Process Improvement</strong>: Boosted test coverage via Snapshot Testing and established lean QA & documentation practices</li>
+        <li><strong>Cross-Team Collaboration</strong>: Reduced iOS app size by 12MB through backend/platform alignment</li>
+        <li><strong>Incident Management</strong>: Fixed Play Store violations and ran RCA to prevent recurrence</li>
+      </ul>
+
+      <div class="job-title">Meesho | Bengaluru, India</div>
+<div class="job-details">Lead Android Developer · Sept 2018 – Sept 2024</div>
+<ul>
+  <li><strong>Performance Optimization</strong>: Led Android Discovery pod for <strong>140M+ MAU app</strong>, achieving <strong>28% improvement</strong> in ANR rate, <strong>27% faster</strong> cold start time, and <strong>36% reduction</strong> in UI jank</li>
+  <li><strong>Architecture Enhancement</strong>: Spearheaded redesign using <strong>MVVM</strong> and <strong>Jetpack components</strong>, significantly improving code maintainability and developer onboarding</li>
+  <li><strong>Analytics & Experimentation</strong>: Architected <strong>in-house event tracking system</strong> that enabled rapid product experimentation and data-driven decisions</li>
+  <li><strong>Design Systems</strong>: Implemented comprehensive <strong>Mesh design system</strong> across all Android modules, ensuring consistent user experience during major rebranding</li>
+  <li><strong>Feature Development</strong>: Enabled <strong>real-time streaming</strong> capabilities through careful SDK evaluation and integration with live broadcast functionality</li>
+  <li><strong>Team Development</strong>: Mentored junior developers, conducted regular <strong>code reviews</strong>, and aligned <strong>OKR planning</strong> with engineering and product objectives</li>
+</ul>
+
+      <div class="job-title">Freshworks | Chennai, India</div>
+<div class="job-details">Senior Software Engineer · Aug 2015 – Aug 2018</div>
+<ul>
+  <li><strong>Product Development</strong>: Led mobile development of <strong>Freshsales CRM</strong> using <strong>Kotlin</strong> and <strong>MVP architecture</strong>, delivering scalable and intuitive user experience</li>
+  <li><strong>Technical Migration</strong>: Drove architectural transition from <strong>MVC to MVVM</strong>, resulting in improved test coverage and application modularity</li>
+  <li><strong>UI/UX Implementation</strong>: Developed dynamic forms and rendering logic based on <strong>REST API contracts</strong> to support customizable sales workflows</li>
+</ul>
+
+      <div class="job-title">Frilp (Acquired by Freshworks) | Chennai, India</div>
+<div class="job-details">Software Engineer · Jan 2014 – Jul 2015</div>
+<ul>
+  <li><strong>Startup Product</strong>: Built social recommendation platform from ground up as core mobile developer, contributing to successful <strong>acquisition by Freshworks</strong></li>
+  <li><strong>Feature Implementation</strong>: Developed key components including <strong>chat</strong>, <strong>user onboarding</strong>, and <strong>notification modules</strong> using Android SDK and REST APIs</li>
+  <li><strong>Agile Practices</strong>: Collaborated closely with backend and design teams to rapidly iterate on product features using <strong>Agile methodologies</strong></li>
+</ul>
+
+      <div class="section-title">Education</div>
+      <p><strong>Coimbatore Institute of Technology</strong> | Coimbatore, India</p>
+      <p><strong>M.Sc. Software Engineering</strong> | 2009 – 2014</p>
+    </div>
+
+    <div class="sidebar">
+            <div style="height: 20px; background-color: #182d41; margin: -40px -30px 30px -30px;"></div>
+
+      <img src="images/PPS.jpg" alt="Profile Photo" class="profile-pic">
+
+      
+      <div class="section-title">Strengths</div>
+<ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2889/2889674.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Cross-Functional Leadership</span><br><span style="font-size: 13px;">Skilled in fostering cross-functional collaboration to enhance project delivery and team dynamics</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/10468/10468234.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Mentorship and Team Development</span><br><span style="font-size: 13px;">Ability to mentor and guide junior developers, fostering growth within the engineering team</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828874.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Execution Excellence</span><br><span style="font-size: 13px;">Delivered scalable, high-performance mobile solutions with strong architectural foundations.</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828656.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">People Leadership</span><br><span style="font-size: 13px;">Built and mentored high-performing teams through structured feedback and coaching.</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/126/126515.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Process Optimization</span><br><span style="font-size: 13px;">Established lean release and documentation practices that improved velocity and quality.</span></div>
+  </li>
+</ul>
+<div class="section-title">Key Achievements</div>
+<ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828374.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">App Performance Optimization</span><br><span style="font-size: 13px;">Successfully led Android performance improvements for an app with over 140 million monthly active users, resulting in significant user experience enhancements</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/535/535236.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Regulatory Compliance and Audit Closure</span><br><span style="font-size: 13px;">Implemented regulatory compliance measures that ensured successful audit closure, demonstrating commitment to industry standards and security practices</span></div>
+  </li>
+</ul>
+<div class="section-title">Technical Skills</div>
+<ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3917/3917215.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Languages & Frameworks</span><br><span style="font-size: 13px;">Kotlin, Java, Android SDK, Jetpack, MVVM, MVP, Clean Architecture</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1102/1102459.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Tools & Platforms</span><br><span style="font-size: 13px;">GitHub Actions, CircleCI, JUnit, Mockito, Snapshot Testing, Retrofit, REST APIs, Firebase, Gradle, Android Studio, Crashlytics, Embrace, Cursor, App Protectt SDK</span></div>
+  </li>
+  <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+    <img src="https://cdn-icons-png.flaticon.com/512/10633/10633911.png" width="16" style="margin-right: 10px; margin-top: 4px; filter: invert(100%) brightness(2);">
+    <div><span style="font-weight: 500;">Practices</span><br><span style="font-size: 13px;">OWASP Compliance, Agile Methodologies, CI/CD Pipelines, Modular Architecture, Performance Optimization</span></div>
+  </li>
+</ul>
+
+<div class="section-title">Languages</div>
+<p style="text-align: left; font-size: 13px; margin-top: 0;">English, Hindi, Malayalam, Tamil, Kannada</p>
+    </div>
+  </div>
+</body>
+</html>
