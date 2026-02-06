@@ -233,67 +233,77 @@
         }
         
         @media print {
-            .print-btn {
-                display: none;
-            }
-            
-            body {
-                margin: 0;
-                padding: 0;
-                font-size: 10px;
-                background: white;
-            }
-            
-            .container {
-                margin: 0;
-                padding: 0;
-                max-width: none;
-                width: 100%;
-                box-shadow: none;
-            }
-            
-            .header {
-                page-break-after: avoid;
-                page-break-inside: avoid;
-                margin-bottom: 8px;
-                padding-bottom: 5px;
-            }
-            
-            .main-content {
-                grid-template-columns: 2.2fr 1fr;
-                gap: 15px;
-            }
-            
-            .section {
-                break-inside: avoid;
-                margin-bottom: 10px;
-            }
-            
-            .job {
-                break-inside: avoid;
-                margin-bottom: 8px;
-            }
-            
-            .sidebar {
-                break-inside: avoid;
-            }
-            
-            /* Prevent empty pages and control page breaks */
-            @page {
-                margin: 0.4in;
-                size: letter;
-            }
-            
-            /* Ensure content flows properly */
-            .main-content {
-                page-break-inside: avoid;
-            }
-            
-            /* Keep header and first section together */
-            .header + .main-content {
-                page-break-before: avoid;
-            }
-        }
+
+  .print-btn {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background: white;
+    color: black;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .header {
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+  }
+
+  /* Re-assert grid explicitly */
+  .main-content {
+    display: grid !important;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 15px;
+  }
+
+  /* Allow page breaks between sections */
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  .job {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 8px;
+  }
+
+  /* Sidebar should flow naturally */
+  .sidebar {
+    break-inside: auto;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 0.4in;
+    size: A4;
+  }
+
+  /* DO NOT block page breaks for full content */
+  .main-content {
+    page-break-inside: auto;
+  }
+
+  /* Keep header with first section */
+  .header + .main-content {
+    page-break-before: avoid;
+  }
+}
     </style>
 </head>
 <body>
@@ -332,7 +342,7 @@
                             <div class="position">Engineering Manager – Mobile (Android & iOS) | Bengaluru, India</div>
                         </div>
                         <ul>
-                            <li><strong>People Leadership</strong>: Managed <strong>5 direct reports (Android & iOS engineers)</strong>, owning performance reviews,  career development, and team engagement</li>
+                            <li><strong>People Leadership</strong>: Managed <strong>5 direct reports (Android & iOS engineers)</strong>, owning performance reviews, career development, and team engagement</li>
 
 <li><strong>Strategic Delivery</strong>: Led a mobile banking pod during the <strong>NESFB merger</strong>, ensuring high-quality and on-time feature delivery</li>
 
