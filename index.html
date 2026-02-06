@@ -275,8 +275,13 @@
 
   /* Keep individual jobs together */
   .job {
+    display: block;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .job ul {
+    margin-top: 6px;
   }
 
   /* Allow columns to paginate */
