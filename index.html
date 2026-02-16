@@ -1,454 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan P M - Resume</title>
+    <title>Pavan P M - Engineering Manager Resume</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             font-size: 11px;
-            line-height: 1.4;
-            color: #333;
-            background: #fff;
+            line-height: 1.45;
+            color: #222;
         }
-        
+
         .container {
             max-width: 8.5in;
-            margin: 0.5in auto;
-            background: white;
+            margin: 0.4in auto;
         }
-        
+
         .header {
-            border-bottom: 2px solid #2c3e50;
-            padding: 15px 0 10px 0;
+            border-bottom: 2px solid #1f2d3d;
+            padding-bottom: 10px;
             margin-bottom: 15px;
         }
-        
+
         .header h1 {
             font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 3px;
+            color: #1f2d3d;
         }
-        
-        .header .title {
+
+        .title {
             font-size: 14px;
-            color: #7f8c8d;
-            margin-bottom: 8px;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 10px;
+            margin-top: 3px;
             color: #555;
         }
-        
-        .contact-info a {
-            color: #2980b9;
-            text-decoration: none;
+
+        .contact {
+            font-size: 10px;
+            margin-top: 6px;
         }
-        
-        .main-content {
-            display: grid;
-            grid-template-columns: 2.2fr 1fr;
-            gap: 20px;
+
+        .contact span {
+            margin-right: 15px;
         }
-        
+
         .section {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-        
+
         .section-title {
             font-size: 12px;
             font-weight: bold;
-            color: #2c3e50;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #bdc3c7;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 6px;
             padding-bottom: 2px;
+            color: #1f2d3d;
         }
-        
+
         .job {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
-        
+
         .job-header {
             margin-bottom: 4px;
         }
-        
+
         .company {
-            font-size: 12px;
             font-weight: bold;
-            color: #2c3e50;
-            display: inline;
+            font-size: 12px;
         }
-        
+
         .position {
             font-size: 11px;
-            color: #555;
-            display: inline;
+            color: #444;
         }
-        
+
         .duration {
-            font-size: 10px;
-            color: #7f8c8d;
-            font-style: italic;
             float: right;
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
         }
-        
-        .job ul {
+
+        ul {
             list-style: none;
             margin-top: 4px;
         }
-        
-        .job li {
-            position: relative;
+
+        li {
             padding-left: 12px;
             margin-bottom: 3px;
+            position: relative;
             font-size: 10px;
-            line-height: 1.3;
         }
-        
-        .job li::before {
+
+        li::before {
             content: '•';
             position: absolute;
             left: 0;
-            color: #2980b9;
-            font-weight: bold;
+            color: #0b5ed7;
         }
-        
+
         .summary {
             font-size: 11px;
             text-align: justify;
+        }
+
+        .skills {
+            font-size: 10px;
             line-height: 1.4;
         }
-        
-        .education {
-            font-size: 11px;
-        }
-        
-        .education h3 {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 2px;
-        }
-        
-        .sidebar .section {
-            margin-bottom: 12px;
-        }
-        
-        .sidebar .section-title {
-            font-size: 11px;
-            margin-bottom: 6px;
-        }
-        
-        .skills-list {
-            font-size: 10px;
-            line-height: 1.3;
-        }
-        
-        .skill-category {
-            margin-bottom: 6px;
-        }
-        
-        .skill-category strong {
-            color: #2c3e50;
-            font-size: 10px;
-        }
-        
-        .strengths-list {
-            list-style: none;
-            font-size: 10px;
-        }
-        
-        .strengths-list li {
-            margin-bottom: 4px;
-            padding-left: 12px;
-            position: relative;
-        }
-        
-        .strengths-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #27ae60;
-            font-weight: bold;
-        }
-        
-        .achievements-list {
-            list-style: none;
-            font-size: 10px;
-        }
-        
-        .achievements-list li {
-            margin-bottom: 4px;
-            padding-left: 12px;
-            position: relative;
-        }
-        
-        .achievements-list li::before {
-            content: '★';
-            position: absolute;
-            left: 0;
-            color: #f39c12;
-            font-size: 8px;
-        }
-        
-        .print-btn {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: #2980b9;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            font-size: 10px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-        
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.35in;
             }
-            
-            .container {
-                margin: 10px;
+
+            body {
+                font-size: 10px;
             }
-            
-            .duration {
-                float: none;
-                display: block;
+
+            .section {
+                margin-bottom: 10px;
+            }
+
+            li {
+                margin-bottom: 3px;
+            }
+
+            .job {
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
         }
-        
-      @media print {
-
-  .print-btn {
-    display: none;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    background: white;
-    color: black;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .container {
-    margin: 0;
-    padding: 0;
-    max-width: none;
-    width: 100%;
-    box-shadow: none;
-  }
-
-  .header {
-    break-after: avoid;
-    page-break-after: avoid;
-    margin-bottom: 8px;
-  }
-
-  .main-content {
-    display: grid !important;
-    grid-template-columns: 2.2fr 1fr;
-    gap: 15px;
-  }
-
-  /* Allow sections to flow */
-  .section {
-    margin-bottom: 10px;
-  }
-
-  /* Keep individual jobs together */
-  .job {
-    display: block;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .job ul {
-    margin-top: 6px;
-  }
-
-  /* Allow columns to paginate */
-  .left-column,
-  .sidebar {
-    break-inside: auto;
-    page-break-inside: auto;
-  }
-
-  @page {
-    size: A4;
-    margin: 0.4in;
-  }
-}
+        }
     </style>
 </head>
+
 <body>
-    <button class="print-btn" onclick="window.print()">Print PDF</button>
-    
     <div class="container">
+
         <header class="header">
             <h1>Pavan P M</h1>
             <div class="title">Engineering Manager – Mobile (Android & iOS)</div>
-            <div class="contact-info">
-                <span>📍 Bengaluru, India</span>
-                <span>📞 +91-9790708464</span>
-                <span>📧 pmpavan@outlook.com</span>
-                <span><a href="https://linkedin.com/in/pavanpm">LinkedIn</a></span>
-                <span><a href="https://github.com/pmpavan">GitHub</a></span>
+            <div class="contact">
+                <span>Bengaluru, India</span>
+                <span>+91-9790708464</span>
+                <span>pmpavan@outlook.com</span>
+                <span>linkedin.com/in/pavanpm</span>
+                <span>github.com/pmpavan</span>
             </div>
         </header>
-        
-        <div class="main-content">
-            <div class="left-column">
-                <section class="section">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <p class="summary">
-                        Engineering Manager with <strong>11+ years</strong> in <strong>mobile development</strong>, specializing in <strong>Android applications</strong> with large-scale user bases. Proven track record of <strong>leading cross-functional teams</strong>, delivering <strong>high-impact features</strong>, and driving <strong>architectural improvements</strong>. Expert in establishing <strong>engineering best practices</strong>, <strong>mentoring teams</strong>, and aligning <strong>technical execution</strong> with business objectives.
-                    </p>
-                </section>
-                
-                <section class="section">
-                    <h2 class="section-title">Professional Experience</h2>
-                    
-                    <div class="job">
-                        <div class="job-header">
-                            <div class="company">slice Small Finance Bank</div>
-                            <div class="duration">Sept 2024 – Nov 2025</div>
-                            <br>
-                            <div class="position">Engineering Manager – Mobile (Android & iOS) | Bengaluru, India</div>
-                        </div>
-                        <ul>
-                            <li><strong>People Leadership</strong>: Managed <strong>5 direct reports (Android & iOS engineers)</strong>, owning performance reviews, career development, and team engagement</li>
 
-<li><strong>Strategic Delivery</strong>: Led a mobile banking pod during the <strong>NESFB merger</strong>, ensuring high-quality and on-time feature delivery</li>
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Engineering Manager with 11+ years of experience leading mobile engineering teams in fintech and
+                consumer-scale platforms. Proven track record of owning roadmap execution, improving application
+                performance at scale (140M+ MAU), driving architectural modernization, and delivering security-compliant
+                features in regulated environments. Strong blend of people leadership, system design, and operational
+                excellence.
+            </p>
+        </section>
 
-<li><strong>Server-Driven UI (SDUI)</strong>: Drove SDUI enhancements and established cross-team planning and execution frameworks</li>
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
 
-<li><strong>Product Execution</strong>: Delivered key customer-facing features including <strong>Interest Certificates, TDS Certificates, Add Money, and Odometer</strong></li>
-
-<li><strong>Security & Compliance</strong>: Integrated <strong>App Protectt SDK</strong> and successfully closed <strong>Compliance and Infosec audits</strong></li>
-
-<li><strong>Engineering Practices</strong>: Improved test coverage and introduced lean QA and documentation workflows to increase delivery efficiency</li>
-
-<li><strong>Release Automation</strong>: Automated mobile release processes and established continuous feedback loops with QA, Security, and Platform teams</li>
-
-<li><strong>Cross-Platform Collaboration</strong>: Reduced <strong>iOS app size by 12MB</strong> through backend and mobile platform coordination</li>
-
-<li><strong>Agile Execution</strong>: Led sprint planning, daily stand-ups, and <strong>OKR reviews</strong> to maintain delivery alignment</li>
-<li><strong>Platform Ownership</strong>: Contributed to mobile roadmap planning and quarterly OKR execution across multiple teams</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-header">
-                            <div class="company">Meesho</div>
-                            <div class="duration">Sept 2018 – Sept 2024</div>
-                            <br>
-                            <div class="position">Lead Android Developer | Bengaluru, India</div>
-                        </div>
-                        <ul>
-                            <li><strong>Performance Optimization</strong>: Led Android Discovery pod for <strong>140M+ MAU app</strong>, achieved <strong>28% ANR improvement</strong>, <strong>27% faster</strong> cold start, <strong>36% UI jank reduction</strong></li>
-                            <li><strong>Architecture Enhancement</strong>: Spearheaded redesign using <strong>MVVM</strong> and <strong>Jetpack components</strong>, improved code maintainability and developer onboarding</li>
-                            <li><strong>Analytics & Experimentation</strong>: Architected <strong>in-house event tracking system</strong> enabling rapid product experimentation and data-driven decisions</li>
-                            <li><strong>Design Systems</strong>: Implemented comprehensive <strong>Mesh design system</strong> across Android modules, ensured consistent UX during rebranding</li>
-                            <li><strong>Feature Development</strong>: Enabled <strong>real-time streaming</strong> through SDK evaluation and live broadcast integration</li>
-                            <li><strong>Team Development</strong>: Mentored junior developers, conducted <strong>code reviews</strong>, aligned <strong>OKR planning</strong> with engineering/product objectives</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-header">
-                            <div class="company">Freshworks</div>
-                            <div class="duration">Aug 2015 – Aug 2018</div>
-                            <br>
-                            <div class="position">Senior Software Engineer | Chennai, India</div>
-                        </div>
-                        <ul>
-                            <li><strong>Product Development</strong>: Led mobile development of <strong>Freshsales CRM</strong> using <strong>Kotlin</strong> and <strong>MVP architecture</strong></li>
-                            <li><strong>Technical Migration</strong>: Drove architectural transition from <strong>MVC to MVVM</strong>, improved test coverage and modularity</li>
-                            <li><strong>UI/UX Implementation</strong>: Developed dynamic forms and rendering logic based on <strong>REST API contracts</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-header">
-                            <div class="company">Frilp (Acquired by Freshworks)</div>
-                            <div class="duration">Jan 2014 – Jul 2015</div>
-                            <br>
-                            <div class="position">Software Engineer | Chennai, India</div>
-                        </div>
-                        <ul>
-                            <li><strong>Startup Product</strong>: Built social recommendation platform from ground up, contributed to successful <strong>Freshworks acquisition</strong></li>
-                            <li><strong>Feature Implementation</strong>: Developed <strong>chat</strong>, <strong>user onboarding</strong>, and <strong>notification modules</strong> using Android SDK and REST APIs</li>
-                            <li><strong>Agile Practices</strong>: Collaborated with backend and design teams using <strong>Agile methodologies</strong></li>
-                        </ul>
-                    </div>
-                </section>
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Slice Small Finance Bank</span>
+                    <span class="duration">Sept 2024 – Nov 2025</span><br>
+                    <span class="position">Engineering Manager – Mobile | Bengaluru, India</span>
+                </div>
+                <ul>
+                    <li><strong>People Leadership:</strong> Managed a team of 5 Android & iOS engineers; owned
+                        performance reviews, career progression, engagement, and delivery accountability.</li>
+                    <li><strong>Strategic Delivery:</strong> Led a cross-functional banking pod during the NESFB merger,
+                        ensuring roadmap execution and high-quality feature delivery under regulatory timelines.</li>
+                    <li><strong>Platform Ownership:</strong> Delivered core financial services features (Interest
+                        Certificates, TDS Certificates, Add Money, Odometer) using modern Android architecture and
+                        scalable design principles.</li>
+                    <li><strong>Security & Compliance Governance:</strong> Integrated App Protectt SDK and partnered
+                        with Compliance & Infosec teams to successfully close KPMG audit requirements.</li>
+                    <li><strong>Operational Excellence:</strong> Improved test coverage through Snapshot Testing and
+                        institutionalized lean QA and documentation practices to reduce regression risk.</li>
+                    <li><strong>Release Governance & Automation:</strong> Strengthened release process through
+                        automation and structured feedback loops with QA, Security, and Platform teams.</li>
+                    <li><strong>Cross-Platform Impact:</strong> Reduced iOS app size by 12MB through coordinated backend and mobile platform optimization initiatives.</li>
+                    <li><strong>AI Adoption Leadership:</strong> Initiated and led weekly AI enablement sessions to drive adoption of tools such as Cursor, Claude Code, and GitHub Copilot; fostered structured peer knowledge-sharing on real project usage, resulting in ~23% reduction in development time across 12 projects of varying complexity.</li>
+                </ul>
             </div>
-            
-            <div class="sidebar">
-                <section class="section">
-                    <h2 class="section-title">Core Strengths</h2>
-                    <ul class="strengths-list">
-                        <li><strong>Cross-Functional Leadership</strong> - Fostering collaboration to enhance delivery and team dynamics</li>
-                        <li><strong>Mentorship & Development</strong> - Guiding junior developers and fostering team growth</li>
-                        <li><strong>Execution Excellence</strong> - Delivering scalable, high-performance mobile solutions</li>
-                        <li><strong>People Leadership</strong> - Building high-performing teams through structured feedback</li>
-                        <li><strong>Process Optimization</strong> - Establishing lean practices improving velocity and quality</li>
-                    </ul>
-                </section>
-                <section class="section">
-                    <h2 class="section-title">Key Achievements</h2>
-                    <ul class="achievements-list">
-                        <li><strong>Performance Excellence</strong> - Led Android optimizations for 140M+ MAU app with significant UX improvements</li>
-                        <li><strong>Regulatory Compliance</strong> - Implemented measures ensuring successful audit closure</li>
-                    </ul>
-                </section>
-                <section class="section">
-                    <h2 class="section-title">Technical Skills</h2>
-                    <div class="skills-list">
-                        <div class="skill-category">
-                            <strong>Languages & Frameworks:</strong> Kotlin, Java, Android SDK, Jetpack, MVVM, MVP, Clean Architecture
-                        </div>
-                        <div class="skill-category">
-                            <strong>Tools & Platforms:</strong> GitHub Actions, CircleCI, JUnit, Mockito, Snapshot Testing, Retrofit, REST APIs, Firebase, Gradle, Android Studio, Crashlytics, Embrace
-                        </div>
-                        <div class="skill-category">
-                            <strong>Practices:</strong> OWASP Compliance, Agile Methodologies, CI/CD Pipelines, Modular Architecture, Performance Optimization
-                        </div>
-                    </div>
-                </section>
-                <section class="section">
-                    <h2 class="section-title">Languages</h2>
-                    <div class="skills-list">
-                        English, Hindi, Malayalam, Tamil, Kannada
-                    </div>
-                </section>
-                <section class="section">
-                    <h2 class="section-title">Education</h2>
-                    <div class="education">
-                        <h3>Coimbatore Institute of Technology</h3>
-                        <p><strong>M.Sc. Software Engineering</strong> | 2009 – 2014 | Coimbatore, India</p>
-                    </div>
-                </section>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Meesho</span>
+                    <span class="duration">Sept 2018 – Sept 2024</span><br>
+                    <span class="position">Lead Android Developer | Bengaluru, India</span>
+                </div>
+                <ul>
+                    <li><strong>Performance Leadership:</strong> Led Android Discovery pod for a 140M+ MAU consumer app;
+                        achieved 28% ANR reduction, 27% faster cold start, and 36% UI jank improvement through
+                        systematic performance optimization.</li>
+                    <li><strong>Architecture Modernization:</strong> Spearheaded MVVM and Jetpack adoption, improving
+                        modularity, maintainability, and developer onboarding efficiency.</li>
+                    <li><strong>Experimentation Infrastructure:</strong> Architected in-house analytics and event
+                        tracking systems enabling rapid A/B experimentation and data-driven product decisions.</li>
+                    <li><strong>Design System Implementation:</strong> Rolled out Mesh design system across Android
+                        modules, ensuring UX consistency during large-scale rebranding.</li>
+                    <li><strong>Streaming Platform Integration:</strong> Evaluated and integrated live-streaming SDKs to
+                        enable real-time broadcast capabilities.</li>
+                    <li><strong>Technical Leadership:</strong> Mentored engineers, led code reviews, and contributed to
+                        hiring and OKR alignment with product and engineering leadership.</li>
+                </ul>
             </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Freshworks</span>
+                    <span class="duration">Aug 2015 – Aug 2018</span><br>
+                    <span class="position">Senior Software Engineer | Chennai, India</span>
+                </div>
+                <ul>
+                    <li><strong>Product Ownership:</strong> Spearheaded mobile development of Freshsales CRM from
+                        early-stage roadmap to multi-release production maturity.</li>
+                    <li><strong>Architecture Modernization:</strong> Led migration from MVC to MVVM, improving
+                        scalability, modularity, and long-term maintainability.</li>
+                    <li><strong>System Design & APIs:</strong> Designed dynamic, server-driven UI flows based on REST
+                        API contracts to support configurable sales workflows.</li>
+                    <li><strong>Release Execution:</strong> Collaborated cross-functionally with backend, product, and
+                        QA to deliver stable, iterative releases using Agile methodologies.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Frilp (Acquired by Freshworks)</span>
+                    <span class="duration">Jan 2014 – Jul 2015</span><br>
+                    <span class="position">Software Engineer | Chennai, India</span>
+                </div>
+                <ul>
+                    <li><strong>0–1 Product Development:</strong> Core mobile engineer for a social recommendation
+                        platform built from the ground up through launch and scale.</li>
+                    <li><strong>Feature Engineering:</strong> Designed and implemented chat, onboarding, and
+                        notification systems using Android SDK and REST APIs.</li>
+                    <li><strong>Startup Execution:</strong> Worked closely with founders, backend, and design teams in a
+                        fast-paced Agile environment, contributing to successful acquisition by Freshworks.</li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <strong>Mobile Engineering & Architecture:</strong> Kotlin, Java, Android SDK, Jetpack, MVVM, MVP, Clean Architecture, REST APIs, Retrofit, Firebase<br><br>
+                <strong>Quality, DevOps & Security:</strong> GitHub Actions, CircleCI, CI/CD Pipelines, JUnit, Mockito, Snapshot Testing, Crashlytics, Embrace, App Protectt SDK, OWASP Compliance, Performance Optimization<br><br>
+                <strong>AI-Driven Engineering & Productivity:</strong> Cursor, Claude Code, GitHub Copilot, AI Agent Workflows (automation & orchestration), Prompt Engineering, LLM-assisted Code Review, BMAD Agile Methodology
+            </div>
+        </section>
+
+        <div style="margin-top:8px; font-size:10px;">
+            <strong>Education:</strong> M.Sc. Software Engineering, Coimbatore Institute of Technology (2009 – 2014), Coimbatore, India
         </div>
+
     </div>
 </body>
+
 </html>
